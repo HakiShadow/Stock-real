@@ -1,0 +1,127 @@
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* TABLE */
+
+.table {
+    table-layout:initial;   
+    border-collapse:collapse;
+    order:2;
+    margin: 20px;
+    border: var(--borders);
+    width: 55em;
+}
+
+/* TABLE TR */
+
+.table-tr {
+    background-color: #71C9CE;
+    font-weight: bolder;
+    text-align: center;
+    height: 68px;
+}
+
+.table-tr:nth-child(even){
+    background-color: #96d3d6;
+}
+
+.table-tr:hover{
+    background-color: #6ac6eb;
+}
+
+/* TABLE TBODY */
+
+.table__tbody-descripcionmed {
+    max-width: 25em;
+}
+
+.table__tbody-fechamed{
+    max-width:fit-content
+}
+
+.table__tbody-tipomed{
+    max-width: 11.250em;
+}
+
+.table__tbody-nombremed{
+    max-width: 7.5em;
+}
+
+/* TABLE TH-TD */
+
+.table-th {
+    border-bottom: #000 solid 0.1em;
+    font-weight: bolder;
+    font-size: 1.3em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    text-align:center;
+    background-color: var(--backgrounds-colors);
+}
+.table-td {
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+}
+
+/* FORMULARIO */
+
+form {
+    border: var(--borders);
+    width: 22em;
+    padding: .85em;
+    border-radius: 0.6em;
+    background-color: var(--backgrounds-colors);
+    order: 1;
+    margin: 20px;
+}
+
+.formulario-titulo {
+    font-size: 1.4em;
+    text-decoration: underline;
+}
+
+form label {
+    display: inline-block;
+    width: 6.5em;
+    font-weight: bold;
+}
+
+.formulario-input {
+    width: 13em;
+    padding: 0.2em 0.4em;
+    border:1px solid #8F85FB;
+	border-radius:3px;
+	background-color:#f6f6f6;
+    margin: 0.5em 0em;
+    display: inline-block;
+}
+
+.formulario-textarea{
+    width: 100%;
+    height: 6em;
+    border:1px solid #8F85FB;
+	border-radius:3px;
+    background-color:#f6f6f6;
+    margin: 0.5em 0;
+    resize:none;
+	display:block;
+}
+
+.formulario-submit {
+    width: 100%;
+    padding: 0.5em 1em;
+    margin-top: 2em;
+    border:1px solid #000;
+    border-radius:5px;
+    display:block;
+	color:#fff;
+	background-color:#000;
+}
+
+.formulario-submit:hover{
+    cursor: pointer;
+}

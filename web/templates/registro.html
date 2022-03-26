@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=brave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+     <!-- CUSTOM CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}"> 
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css')}}" >
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css')}}">
+
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <!-- NAV BAR-->
+        <nav class="navbar__main">
+            <a href="/">
+                <img class="navbar-logo" src="{{url_for('static', filename='logo.jpg')}}" alt="logo">
+            </a>
+            <div class="navbar-nav">
+                <ul class="navbar__ul">
+                    <li class="navbar-li">
+                        <a class="navbar-link" href="/login">Iniciar sesion</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="formContainer">
+            <form class="formulario" action="">
+
+                <img class="formulario-logo" src="{{ url_for('static', filename='logo.jpg')}}" alt="logo">
+                <h1 class="formulario-titulo">Sign Up</h1>
+                
+                <div class="formulario__inputContainer">
+                    <input type="text" class="formulario__inputContainer-input" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <label for="nombre" class="formulario__inputContainer-label">Nombre</label>
+                </div>
+                
+                <div class="formulario__inputContainer">
+                    <input type="email" class="formulario__inputContainer-input" id="email" name="email" placeholder="Email" required>
+                    <label for="email" class="formulario__inputContainer-label">Email</label>
+                </div>
+                
+                <div class="formulario__inputContainer">
+                    <input type="password" class="formulario__inputContainer-input" id="pass" name="pass" placeholder="Password" required>
+                    <label for="pass" class="formulario__inputContainer-label">Password</label>
+                </div>
+                
+                <div class="formulario__inputContainer">
+                    <input type="password" class="formulario__inputContainer-input" id="repeatPass" name="passConfirm" placeholder="RepeatPass" required>
+                    <label for="repeatPass" class="formulario__inputContainer-label">Repetir password</label>
+                </div>
+
+                <div class="formulario__inputContainer">
+                    <input type="password" class="formulario__inputContainer-input" id="claveadmin" name="clave" placeholder="ClaveAdmin">
+                    <label for="claveadmin" class="formulario__inputContainer-label">Clave de administrador</label>
+                </div>
+                
+                <div class="formulario__checkbox">
+                    <input class="formulario__checkbox-box" type="checkbox" name="tyc" id="tyc">
+                    <label class="formulario__checkbox-tyc" for="tyc">
+                        Acepto los 
+                        <a class="formulario__checkbox-a" href="#">terminos y condiciones</a>
+                    </label>
+                </div>
+
+                <button class="enviar" type="submit">Enviar</button>
+
+            </form>
+        </div>
+
+    </main>
+
+
+</body>
+</html>

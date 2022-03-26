@@ -1,0 +1,3 @@
+Los modelos actuan de forma directa sobre la base de datos
+
+Todas las funcionalidades relacionadas a una entidad en especifico, deben ir aqui

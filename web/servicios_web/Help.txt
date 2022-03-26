@@ -1,0 +1,3 @@
+En sevicios cada entidad pose una carpeta particular, y dentro de ella cada funcionalidad tiene su propio archivo.
+
+Los servicios matienen la comunicación entre el servidor y los modelos

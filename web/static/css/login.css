@@ -1,0 +1,158 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10vh;
+}
+
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--backgrounds-colors);
+  border-radius: 0.6em;
+  border: var(--borders);
+  height: 35em;
+  width: 25em;
+  padding: 20px;
+}
+
+.formulario-img {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+}
+
+.formulario__div {
+  position: relative;
+  width: 23em;
+  height: 4em;
+  margin: 10px;
+}
+
+.formulario__div-label {
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  padding: 0 4px;
+  color: #DADCE0;
+  font-size: 16px;
+  z-index: 40;
+  -webkit-transition: .6s ease top, .6s ease opacity;
+  transition: .6s ease top, .6s ease opacity;
+}
+
+.formulario__div-input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: solid 2px #800080;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 15px;
+  outline: none;
+  background: #f1f1f1;
+  z-index: 1;
+}
+
+.formulario__div-input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formulario__div-input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__div-input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__div-input::placeholder {
+  color: transparent;
+}
+
+.formulario__div-input:focus {
+  border: solid 3px #800080;
+}
+
+.formulario__div-input:focus + .formulario__div-label {
+  /*lo leo como: cuando haya foco en el input: realizar lo siguiente en el label*/
+  top: 8px;
+  left: 13px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: #800080;
+}
+
+.formulario__div-input:not(:placeholder-shown) + .formulario__div-label {
+  top: -17px;
+  z-index: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(128, 0, 128, 0.459);
+}
+
+.formulario__checkbox {
+  margin: 1em;
+}
+
+.formulario__checkbox__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+
+.formulario__checkbox__label-check {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* cierra el formulario */
+.button {
+  width: 8em;
+  height: 2em;
+  margin-bottom: 1em;
+  border: 3px solid #000;
+  border-radius: 0.6em;
+}
+
+.button:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  outline: var(--borders);
+}
+
+.credits {
+  position: relative;
+  font-size: .8em;
+  opacity: 0.5;
+  top: 15px;
+  right: 120px;
+}
+/*# sourceMappingURL=login.css.map */

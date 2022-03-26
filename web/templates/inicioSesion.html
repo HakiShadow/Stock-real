@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=brave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- CUSTOM CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}"> 
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css')}}" >
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+
+    <title>Iniciar sesion</title>
+</head>
+<body>
+
+    <header>
+        <!-- NAV BAR-->
+        <nav class="navbar__main">
+            <a href="/">
+                <img class="navbar-logo" src="{{url_for('static', filename='logo.jpg')}}" alt="logo">
+            </a>
+            <div class="navbar-nav">
+                <ul class="navbar__ul">
+                    <li class="navbar-li">
+                        <a class="navbar-link" href="/registro">Registrate</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form class="formulario" action="/login">
+            <img class="formulario-img" src="{{ url_for('static', filename='logo.jpg')}}" alt="">
+            <h1 class="formulario-h1">Login</h1>
+            
+            <div class="formulario__div">
+                <input class="formulario__div-input formulario__div-user" type="text" name="username" id="user" placeholder="user">
+                <label class="formulario__div-label" for="user">Username</label>
+            </div>
+
+            <div class="formulario__div">
+                <input class="formulario__div-input formulario__div-pass" type="password" name="password" id="pass" placeholder="pass">
+                <label class="formulario__div-label" for="pass">Password</label>
+            </div>
+
+            <div class="formulario__checkbox">
+                <label class="formulario__checkbox__label" for="check">
+                    <input class="formulario__checkbox__label-check" type="checkbox" name="remember" id="check">
+                    Remember me?
+                </label>
+            </div>
+
+            <button class="button" type="submit">ENVIAR</button>
+            <p class="credits">By: Leandro Arrigonni</p>
+        </form>
+    </main>
+
+</body>
+</html>

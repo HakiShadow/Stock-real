@@ -1,0 +1,56 @@
+@media screen and (max-width: 360px) {
+
+    
+
+}
+
+@media screen and (max-width: 375px) {
+    header{
+        width: 100vw;
+        /* Aqui tengo dramas -.- */
+    }
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo-h1 {
+        flex: 0 1 auto;
+        padding: 0.3%;
+        text-align: center;
+        margin-top: 5vh;
+        font-size: 2em;
+        font-style: oblique;
+        font-family: cursive;
+    
+        background:#CCC;
+        border-radius: 23px;
+        border: #71C9CE solid 3px;
+    }
+
+    .navbar-link, .navbar-buscar {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .navbar__ul{
+        visibility: visible;
+    }
+
+    .navbar-options {
+        visibility: visible;
+        order: 4;
+    }
+
+    .navbar__ul {
+        display: flex;
+        flex-flow: column-reverse nowrap ;
+        visibility: collapse ;
+    }
+
+    .navbar-options:hover > .navbar__ul {
+        visibility: visible;
+    }
+}

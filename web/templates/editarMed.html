@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- COMPLETAR LOS META FALTANTES -->
+    
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css')}}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css')}}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/editarMed.css')}}">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+
+    
+    <title>Editar</title>
+</head>
+<body>
+    <header>
+    <!-- NAV BAR-->
+    <nav class="navbar__main">
+        <a href="/">
+            <img class="navbar-logo" src="{{url_for('static', filename='logo.jpg')}}" alt="logo">
+        </a>
+        <div class="navbar-nav">
+            <ul class="navbar__ul">
+                <li class="navbar-li">
+                    <a class="navbar-link" href="/">Inicio</a>
+                </li>
+                <li class="navbar-li">
+                    <a class="navbar-link" href="/CerrarSesion">Cerrar sesión</a>
+                </li>
+                <li class="navbar-busqueda">
+                    <div class="busqueda">
+                        <input class="navbar-input" id="buscar" type="search" name="buscar" placeholder="Buscar">
+                        <button class="navbar-buscar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- TITLE-->
+    <div class="titulo">
+        <h1 class="titulo-h1">Editar Medicamento</h1>
+    </div>
+    </header>
+    
+    <main class="main">
+        <!-- TABLE-->
+        <table class="table">
+            <thead> <!-- Cabezales -->
+                <tr class="table-tr">
+                    <th class="table-th">Nombre</th>
+                    <th class="table-th">Tipo</th>
+                    <th class="table-th">Cantidad</th>
+                    <th class="table-th">Fecha</th>
+                    <th class="table-th">Nota</th>
+                </tr>
+            </thead>
+
+            <tbody class="table__tbody"> <!-- Cuerpo de la tabla -->
+                {% for med in meds %}
+                <tr class="table-tr">
+                    <td class="table__tbody-nombremed table-td" >{{med.nombre}}</td>
+                    <td class="table__tbody-tipomed table-td">{{med.tipo}}</td>
+                    <td class="table__tbody-cantidadmed table-td" >{{med.cantidad}}</td>
+                    <td class="table__tbody-fechamed table-td">{{med.fecha[:7]}}</td>
+                    <td class="table__tbody-descripcionmed table-td">{{med.descripcion}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- FORM -->
+        <div>
+            <form class="formulario" action="" method="post">
+                <h3 class="formulario-titulo">Editar medicamento</h3>
+
+                <input type="hidden" name="id" value="id">
+
+                <div class="formulario__inputContainer">
+                    <input class="formulario__inputContainer-input" id="nombre" type="text" name="nombre" required placeholder="Nombre">    
+                    <label class="formulario__inputContainer-label" for="nombre">Nombre</label>
+                </div>
+
+                <div class="formulario__inputContainer">
+                    <input class="formulario__inputContainer-input" id="tipo" type="text" name="tipo" required placeholder="Tipo">    
+                    <label class="formulario__inputContainer-label" for="tipo">Tipo</label>
+                </div> 
+                
+                <div class="formulario__inputContainer">
+                    <input class="formulario__inputContainer-input" id="cantidad" type="number" name="cantidad" min="0" required placeholder="Cantidad disponible">    
+                    <label class="formulario__inputContainer-label" for="cantidad">Cantidad</label>
+                </div>
+        
+                <div class="formulario__inputContainer">
+                    <input class="formulario__inputContainer-input" id="fecha" type="month" name="fecha" required>    
+                    <label class="formulario__inputContainer-label" for="fecha"> Fecha de vencimiento</label>
+                </div>
+                
+                <div class="formulario__inputContainer">
+                    <textarea class="formulario__inputContainer-textarea formulario__inputContainer-input" id="descripcion" type="text" name="descripcion" maxlength="300" placeholder="Escribe una descripción en menos de 300 caracteres"></textarea>    
+                    <label class="formulario__inputContainer-label" for="descripcion">Nota</label>
+                </div> 
+
+                <input class="formulario-submit" type="submit" name="enviar" value="Agregar"/>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>

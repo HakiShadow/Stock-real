@@ -1,0 +1,238 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.table {
+  table-layout: initial;
+  border-collapse: collapse;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  margin: 20px;
+  border: var(--borders);
+  /* TABLE TR */
+  /* TABLE TBODY */
+  /* TABLE TH-TD */
+}
+
+.table-tr {
+  background-color: #71C9CE;
+  font-weight: bolder;
+  text-align: center;
+  height: 68px;
+}
+
+.table-tr:nth-child(even) {
+  background-color: #96d3d6;
+}
+
+.table-tr:hover {
+  background-color: #6ac6eb;
+}
+
+.table-tr:hover .table__tbody-iconos {
+  visibility: visible;
+  background: #130f40;
+  opacity: 1;
+}
+
+.table__tbody-descripcionmed {
+  max-width: 25em;
+}
+
+.table__tbody-fechamed {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.table__tbody-tipomed {
+  max-width: 11.250em;
+}
+
+.table__tbody-nombremed {
+  max-width: 7.5em;
+}
+
+.table__tbody-iconos {
+  visibility: collapse;
+  Opacity: 0;
+  Transition: opacity .3s;
+}
+
+.table-th {
+  border-bottom: #000 solid 0.1em;
+  font-weight: bolder;
+  font-size: 1.3em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  background-color: var(--backgrounds-colors);
+}
+
+.table-td {
+  padding-left: 1.1em;
+  padding-right: 1.1em;
+}
+
+.table-iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 0;
+}
+
+.table-icon {
+  padding: 5px;
+  margin: 3px;
+  margin-left: 2px;
+  border: var(--borders);
+  border-radius: 50%;
+  background-color: var(--backgrounds-colors);
+  color: #000;
+}
+
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25em;
+  height: 33em;
+  margin-top: 20px;
+  padding: 0.5em;
+  border: var(--borders);
+  border-radius: 0.6em;
+  background-color: var(--backgrounds-colors);
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  gap: 1.2em;
+}
+
+.formulario-titulo {
+  font-size: 2em;
+  text-decoration: none;
+}
+
+.formulario__inputContainer {
+  position: relative;
+  width: 20em;
+  height: 3em;
+}
+
+.formulario__inputContainer-label {
+  position: absolute;
+  top: 15px;
+  left: 7px;
+  color: #DADCE0;
+  padding-left: 13px;
+  font-size: 16px;
+  z-index: 40;
+  -webkit-transition: .6s ease top, .6s ease opacity;
+  transition: .6s ease top, .6s ease opacity;
+}
+
+.formulario__inputContainer-input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 3px solid #800080;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 15px;
+  outline: none;
+  background: #f1f1f1;
+  z-index: 1;
+}
+
+.formulario__inputContainer-input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input::placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input:focus {
+  border: var(--borders);
+}
+
+.formulario__inputContainer-input:focus + .formulario__inputContainer-label {
+  top: 15px;
+  left: 5px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: purple;
+}
+
+.formulario__inputContainer-input:not(:placeholder-shown) + .formulario__inputContainer-label {
+  top: -18px;
+  z-index: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(128, 0, 128, 0.459);
+}
+
+.formulario__inputContainer-textarea {
+  height: 6em;
+  background-color: #f6f6f6;
+  resize: none;
+}
+
+.formulario-submit {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid #000;
+  border-radius: 7px;
+  color: #fff;
+  background-color: #000;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.formulario-submit:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  border: var(--borders);
+}
+
+/* a fecha de vencimiento puedo camuflarla con el background color y luego hacerla aparecer cuando haya un focus o algo asi en el campo particular*/
+/*# sourceMappingURL=landing.css.map */

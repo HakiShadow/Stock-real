@@ -1,0 +1,121 @@
+:root {
+    --backgrounds-colors: #E6F4FF;
+    --borders: #8F85FB solid 4px;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #130f40;
+}
+
+/* TITULO */
+
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-h1 {
+    flex: 0 1 auto;
+    padding: 0.3%;
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 3em;
+
+    background: var(--backgrounds-colors);
+    border-radius: 23px;
+    border: var(--borders)
+}
+
+/* NAVBAR */
+
+header {
+    display: block;
+
+}
+
+.navbar__main{
+    background: #8F85FB;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: var(--borders)
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    font-size: 1.34em;
+    margin: 0.5%;
+}
+
+.navbar-logo {
+    border-radius: 100%;
+    margin: 0.2em;
+    padding: 0.1em;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.busqueda {
+    display: flex;
+}
+
+.navbar-input{
+    width: 6em;
+    padding: 5px;
+    height: 35px;
+    border: 3px solid #71C9CE;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #000;
+}
+
+.navbar-buscar{
+    width: 40px;
+    height: 35px;
+    border: 1px solid #71C9CE;
+    background: #71C9CE;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/* NAVBAR LINKS */
+
+.navbar-link, .navbar-buscar {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+.navbar__ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.navbar-li, .navbar-busqueda {
+    list-style-type: none;
+}
+
+.navbar-li {
+    padding: 0 1em 0em 0;
+}
+
+.navbar-link:hover {
+    border-bottom: solid 0.12em #000000 ;
+}
+
+.navbar-link:hover {
+    color:#7fffd4
+}
+
+.navbar-buscar:hover {
+    color: #AA96DA;
+}

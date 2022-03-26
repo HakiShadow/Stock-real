@@ -1,0 +1,157 @@
+body {
+  height: 100%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90vh;
+}
+
+.formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  border: var(--borders);
+  border-radius: 0.6em;
+  background-color: var(--backgrounds-colors);
+  height: 40em;
+  width: 25em;
+  padding: 20px;
+}
+
+.formulario-logo {
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+}
+
+.formulario-titulo {
+  margin: 0;
+}
+
+.formulario__inputContainer {
+  position: relative;
+  height: 4em;
+  width: 18em;
+}
+
+.formulario__inputContainer-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  color: #DADCE0;
+  font-size: 16px;
+  z-index: 40;
+  -webkit-transition: .6s ease top, .6s ease opacity;
+  transition: .6s ease top, .6s ease opacity;
+}
+
+.formulario__inputContainer-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 2px #800080;
+  border-radius: 7px;
+  padding: 13px;
+  outline: none;
+  background: #f1f1f1;
+  z-index: 1;
+}
+
+.formulario__inputContainer-input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input::placeholder {
+  color: transparent;
+}
+
+.formulario__inputContainer-input:focus {
+  border: 3px solid #800080;
+}
+
+.formulario__inputContainer-input:focus + .formulario__inputContainer-label {
+  top: 8px;
+  left: 13px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 20;
+  color: #800080;
+}
+
+.formulario__inputContainer-input:not(:placeholder-shown) + .formulario__inputContainer-label {
+  top: -18px;
+  color: rgba(128, 0, 128, 0.459);
+}
+
+.formulario__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.formulario__checkbox-box {
+  height: 15px;
+  width: 15px;
+}
+
+.formulario__checkbox-a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.formulario__checkbox-a:hover {
+  border-bottom: 3px solid #800080;
+  border-radius: 3px;
+  font-weight: bolder;
+}
+
+.enviar {
+  width: 8em;
+  height: 3em;
+  margin-bottom: 1em;
+  border: 3px solid #000;
+  border-radius: 0.6em;
+}
+
+.enviar:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  outline: var(--borders);
+}
+/*# sourceMappingURL=registro.css.map */
