@@ -1,6 +1,6 @@
 
 from flask import Flask, request, redirect, url_for, session, render_template
-from servicios_web import medicamentos, autenticación
+from servicios_web.medicamentos import webServiciosMed
 
 app = Flask(__name__, template_folder='templates')
 
@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def landing():
-    meds = medicamentos.ListarMed() or []
+    meds = webServiciosMed.ListarMed() or []
     return render_template('medicamentos.html', meds=meds)
 
 @app.route('/login', methods = ['GET', 'POST'])
@@ -30,7 +30,7 @@ def subirmed():
     nuevoMed = request.form
     if 'descripcion' not in nuevoMed:
         nuevoMed['descripcion'] = ""
-    medicamentos.añadirMed(nuevoMed['nombre'], nuevoMed['tipo'], 
+    webServiciosMed.añadirMed(nuevoMed['nombre'], nuevoMed['tipo'], 
                         nuevoMed['cantidad'], nuevoMed['fecha'], 
                         nuevoMed['descripcion'])
     return redirect('/')
@@ -39,7 +39,7 @@ def subirmed():
     
 @app.route('/trash/<id>')
 def eliminar(id):
-    medicamentos.EliminarMed(id)
+    webServiciosMed.EliminarMed(id)
     return redirect('/')
 # ___________________________________________________________________________________________________________
 
@@ -50,11 +50,11 @@ def editar(id):
         datosMed = request.form
         if 'descripcion' not in datosMed:
            datosMed['descripcion'] = ""
-        medicamentos.editarMed(id, datosMed['nombre'], datosMed['tipo'], 
+        webServiciosMed.editarMed(id, datosMed['nombre'], datosMed['tipo'], 
                         datosMed['cantidad'], datosMed['fecha'], 
                         datosMed['descripcion'])
         return redirect('/')
-    meds = medicamentos.select(id) or []
+    meds = webServiciosMed.select(id) or []
     return render_template('editarMed.html', meds=meds)
 
 

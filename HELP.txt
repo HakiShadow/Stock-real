@@ -1,0 +1,6 @@
+1-El servidor web se comunica con el serviddor de Apis
+2- Las API llaman a los servicios
+3- los sevicios llaman a los modelos
+4- los modelos llaman a la base de datos
+5- (opcional) la base de datos puede devolver datos al modelo, que se lo devuelve al servicio, 
+que lo reenvia al servidor de api
