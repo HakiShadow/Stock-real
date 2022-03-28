@@ -13,29 +13,37 @@
     margin: 20px;
     border: var(--borders);
 
-/* TABLE TR */
-
-    &-tr {
-        background-color: #71C9CE;
-        font-weight: bolder;
-        text-align: center;
-        height: 68px;   
-
-        &:nth-child(even){
-            background-color: #96d3d6;
-        }
-    
-        &:hover{
-            background-color: #6ac6eb;
-
-            .table__tbody-iconos {
-                visibility: visible;
-                background: #130f40;
-                opacity: 1;
-            }
-        }
+    &__tbody-iconos{
+        visibility: collapse;
+        opacity: 0;
+        transition: 1s;
     }
 
+    /* TABLE TR */
+        /*ELEMENTO 2*/
+        &-tr {
+            background-color: #71C9CE;
+            font-weight: bolder;
+            text-align: center;
+            height: 68px;   
+    
+            &:nth-child(even){
+                background-color: #96d3d6;
+            }
+        
+            &:hover{
+                background-color: #6ac6eb;
+    
+                .table__tbody-iconos {
+                    visibility: visible;
+                    background: #130f40;
+                    opacity: 1;
+                    Transition: opacity .3s; 
+                }
+            }
+        }
+
+    
 /* TABLE TBODY */
 
     &__tbody {
@@ -55,12 +63,7 @@
         &-nombremed{
             max-width: 7.5em;
         }
-        &-iconos {
-            visibility: collapse;
-            Opacity:0;
-            Transition: opacity .3s; 
-        }
-    }
+}
 
 /* TABLE TH-TD */
 
@@ -83,6 +86,7 @@
         display: flex;
         flex-direction: column;
         width: 0;
+        
     }
     
     &-icon {

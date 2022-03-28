@@ -22,8 +22,16 @@
   margin: 20px;
   border: var(--borders);
   /* TABLE TR */
+  /*ELEMENTO 2*/
   /* TABLE TBODY */
   /* TABLE TH-TD */
+}
+
+.table__tbody-iconos {
+  visibility: collapse;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .table-tr {
@@ -45,6 +53,7 @@
   visibility: visible;
   background: #130f40;
   opacity: 1;
+  Transition: opacity .3s;
 }
 
 .table__tbody-descripcionmed {
@@ -63,12 +72,6 @@
 
 .table__tbody-nombremed {
   max-width: 7.5em;
-}
-
-.table__tbody-iconos {
-  visibility: collapse;
-  Opacity: 0;
-  Transition: opacity .3s;
 }
 
 .table-th {

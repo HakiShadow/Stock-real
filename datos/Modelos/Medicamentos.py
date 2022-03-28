@@ -3,9 +3,10 @@ from datos.Tablas.Crear_base_de_datos import DataBase
 bd = DataBase()
 
 def agregarMed(nombre, tipo, cantidad, fecha, descripcion):
+
     sentencia_sql = f"""
     INSERT INTO Medicamentos (nombre, tipo, cantidad, fecha, descripcion)
-    VALUES ('{nombre}', '{tipo}', '{cantidad}', STR_TO_DATE('{fecha}',"%Y/%m"), '{descripcion}')
+    VALUES ('{nombre.capitalize()}', '{tipo.capitalize()}', '{cantidad}', STR_TO_DATE('{fecha}',"%Y/%m"), '{descripcion.capitalize()}')
     """
     bd.EjecutarSQL(sentencia_sql)
 
@@ -13,11 +14,11 @@ def editarMed(id, datosMed):
     sentencia_sql = f"""
     UPDATE Medicamentos
     SET
-    nombre = '{datosMed["nombre"]}',
-    tipo = '{datosMed["tipo"]}',
+    nombre = '{datosMed["nombre"].capitalize()}',
+    tipo = '{datosMed["tipo"].capitalize()}',
     cantidad = '{datosMed["cantidad"]}',
     fecha = STR_TO_DATE('{datosMed["fecha"]}',"%Y/%m"),
-    descripcion = '{datosMed["descripcion"]}'
+    descripcion = '{datosMed["descripcion"].capitalize()}'
     WHERE
     idmed={id}
     """
