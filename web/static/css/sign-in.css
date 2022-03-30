@@ -785,39 +785,46 @@ header {
   display: flex;
 }
 
+body {
+  height: 100%;
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10vh;
+  height: 90vh;
 }
 
 .formulario {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  background-color: #E6F4FF;
-  border-radius: 0.6em;
+  gap: 20px;
   border: #800080 solid 4px;
-  height: 35em;
+  border-radius: 0.6em;
+  background-color: #E6F4FF;
+  height: 40em;
   width: 25em;
   padding: 20px;
 }
-.formulario-img {
+.formulario-logo {
   height: 5em;
   width: 5em;
   border-radius: 50%;
 }
-.formulario__div {
-  position: relative;
-  width: 23em;
-  height: 4em;
-  margin: 10px;
+.formulario-titulo {
+  margin: 0;
 }
-.formulario__div-label {
+.formulario__inputContainer {
+  position: relative;
+  height: 4em;
+  width: 18em;
+}
+.formulario__inputContainer-label {
   position: absolute;
-  top: 23px;
+  top: 15px;
   left: 15px;
   padding: 0 4px;
   color: #DADCE0;
@@ -826,75 +833,67 @@ main {
   -webkit-transition: 0.6s ease top, 0.6s ease opacity;
   transition: 0.6s ease top, 0.6s ease opacity;
 }
-.formulario__div-input {
+.formulario__inputContainer-input {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
   border: solid 2px #800080;
   border-radius: 7px;
-  font-size: 16px;
-  padding: 15px;
+  padding: 13px;
   outline: none;
   background: #f1f1f1;
   z-index: 1;
 }
-.formulario__div-input::placeholder {
+.formulario__inputContainer-input::placeholder {
   color: transparent;
 }
-.formulario__div-input:focus {
-  border: solid 3px #800080;
+.formulario__inputContainer-input:focus {
+  border: 3px solid #800080;
 }
-.formulario__div-input:focus + .formulario__div-label {
-  /*lo leo como: cuando haya foco en el input: realizar lo siguiente en el label*/
+.formulario__inputContainer-input:focus + .formulario__inputContainer-label {
   top: 8px;
   left: 13px;
-  z-index: 10;
   font-size: 14px;
   font-weight: 600;
+  z-index: 20;
   color: #800080;
 }
-.formulario__div-input:not(:placeholder-shown) + .formulario__div-label {
-  top: -17px;
-  z-index: 0;
-  font-size: 14px;
-  font-weight: 600;
+.formulario__inputContainer-input:not(:placeholder-shown) + .formulario__inputContainer-label {
+  top: -18px;
   color: rgba(128, 0, 128, 0.459);
 }
 .formulario__checkbox {
-  margin: 1em;
-}
-.formulario__checkbox__label {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 6px;
+  align-items: center;
+  gap: 5px;
 }
-.formulario__checkbox__label-check {
-  width: 1rem;
-  height: 1rem;
+.formulario__checkbox-box {
+  height: 15px;
+  width: 15px;
+}
+.formulario__checkbox-a {
+  text-decoration: none;
+  color: #000000;
+}
+.formulario__checkbox-a:hover {
+  border-bottom: 3px solid #800080;
+  border-radius: 3px;
+  font-weight: bolder;
 }
 
-/* cierra el formulario */
-.button {
+.enviar {
   width: 8em;
-  height: 2em;
+  height: 3em;
   margin-bottom: 1em;
   border: 3px solid #000;
   border-radius: 0.6em;
 }
-.button:hover {
+.enviar:hover {
   transform: translateY(-2px);
   outline: #800080 solid 4px;
 }
 
-.credits {
-  position: relative;
-  font-size: 0.8em;
-  opacity: 0.5;
-  top: 15px;
-  right: 120px;
-}
-
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=sign-in.css.map */

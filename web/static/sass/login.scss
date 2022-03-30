@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'normalize';
+@import 'navbar';
+
 main {
     display: flex;
     justify-content: center;
@@ -10,9 +14,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--backgrounds-colors);
+    background-color: $backgrounds-colors;
     border-radius: 0.6em;
-    border: var(--borders);
+    border: $borders;
     height: 35em;
     width: 25em;
     padding: 20px;
@@ -113,7 +117,7 @@ main {
         border-radius: 0.6em;
         &:hover{
             transform: translateY(-2px);
-            outline: var(--borders);
+            outline: $borders;
         }
 }
     

@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'normalize';
+@import 'navbar';
+
 body{
     height: 100%;
 }
@@ -15,9 +19,9 @@ main {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border: var(--borders);
+    border: $borders;
     border-radius: 0.6em;
-    background-color: var(--backgrounds-colors);
+    background-color: $backgrounds-colors;
     height: 40em;
     width: 25em;
     padding: 20px;
@@ -122,7 +126,7 @@ main {
     border-radius: 0.6em;
     &:hover{
         transform: translateY(-2px);
-        outline: var(--borders);
+        outline: $borders;
     }
 }
 

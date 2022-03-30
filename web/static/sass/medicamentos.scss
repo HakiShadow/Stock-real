@@ -1,3 +1,7 @@
+@import 'variables';
+@import 'normalize';
+@import 'navbar';
+
 .main {
     display: flex;
     flex-flow: row wrap;
@@ -11,7 +15,7 @@
     border-collapse:collapse;
     order:2;
     margin: 20px;
-    border: var(--borders);
+    border: $borders;
 
     &__tbody-iconos{
         visibility: collapse;
@@ -74,7 +78,7 @@
         padding-top: 0.2em;
         padding-bottom: 0.2em;
         text-align:center;
-        background-color: var(--backgrounds-colors);
+        background-color: $backgrounds-colors;
     }
 
     &-td {
@@ -93,9 +97,9 @@
         padding: 5px;
         margin: 3px;
         margin-left: 2px;
-        border: var(--borders);
+        border: $borders;
         border-radius: 50%;
-        background-color: var(--backgrounds-colors);
+        background-color: $backgrounds-colors;
         color: #000;
     }
 
@@ -113,9 +117,9 @@
     height: 33em;
     margin-top: 20px;
     padding: 0.5em;
-    border: var(--borders);
+    border: $borders;
     border-radius: 0.6em;
-    background-color: var(--backgrounds-colors);
+    background-color: $backgrounds-colors;
     order: 1;
     gap: 1.2em;
 
@@ -160,7 +164,7 @@
             }
 
             &:focus{
-                border: var(--borders);
+                border: $borders;
             }
 
             &:focus + .formulario__inputContainer-label{
@@ -204,7 +208,7 @@
 
         &:hover{
             transform: translateY(-2px);
-            border: var(--borders);
+            border: $borders;
         } 
     }
     

@@ -1,7 +1,6 @@
-:root {
-    --backgrounds-colors: #E6F4FF;
-    --borders: #800080 solid 4px;
-}
+@import 'variables';
+@import 'normalize';
+
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -24,9 +23,9 @@ header {
         margin-top: 5vh;
         font-size: 3em;
     
-        background: var(--backgrounds-colors);
+        background: $backgrounds-colors;
         border-radius: 23px;
-        border: var(--borders)
+        border: $borders
     }
 }
 
@@ -39,7 +38,7 @@ header {
         flex-flow: row nowrap;
         justify-content:space-between;
         align-items: center;
-        border-bottom: var(--borders)
+        border-bottom: $borders
     }
     
     &-nav {
