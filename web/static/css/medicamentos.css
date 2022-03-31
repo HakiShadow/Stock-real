@@ -799,7 +799,6 @@ header {
   margin: 20px;
   border: #800080 solid 4px;
   /* TABLE TR */
-  /*ELEMENTO 2*/
   /* TABLE TBODY */
   /* TABLE TH-TD */
 }
@@ -958,6 +957,41 @@ header {
   border: #800080 solid 4px;
 }
 
-/* a fecha de vencimiento puedo camuflarla con el background color y luego hacerla aparecer cuando haya un focus o algo asi en el campo particular*/
+@media screen and (max-width: 400px) {
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .table {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .table-nombremed {
+    max-width: 1em;
+  }
+  .table-descripcionmed {
+    max-width: 10em;
+  }
+  .table-fechamed {
+    max-width: fit-content;
+  }
+  .table-tipomed {
+    max-width: 0.5em;
+  }
+  .table-nombremed {
+    max-width: 4em;
+  }
+  .table-td {
+    padding: 3px;
+  }
+}
 
 /*# sourceMappingURL=medicamentos.css.map */
