@@ -2,6 +2,8 @@ import requests
 from datetime import datetime
 from servicios_web import rest_api
 
+
+
 class webServiciosMed():
     def ListarMed():
         respuesta = requests.get(f'{rest_api.API_URL}/listar')

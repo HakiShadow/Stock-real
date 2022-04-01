@@ -741,7 +741,7 @@ header {
   width: 6em;
   padding: 5px;
   height: 35px;
-  border: 3px solid #71C9CE;
+  border: 3px solid #800080;
   border-right: none;
   border-radius: 5px 0 0 5px;
   outline: none;
@@ -750,10 +750,10 @@ header {
 .navbar-buscar {
   width: 40px;
   height: 35px;
-  border: 1px solid #71C9CE;
-  background: #71C9CE;
+  border: 1px solid #800080;
+  background: #800080;
   text-align: center;
-  color: #fff;
+  color: #f1f1f1;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 20px;
@@ -766,7 +766,7 @@ header {
   color: #000000;
 }
 .navbar-link:hover {
-  border-bottom: solid 0.12em #000000;
+  border-bottom: solid 0.12em #800080;
   font-weight: bolder;
 }
 .navbar__ul {
@@ -893,7 +893,7 @@ header {
   position: absolute;
   top: 15px;
   left: 7px;
-  color: #DADCE0;
+  color: #babcc0;
   padding-left: 13px;
   font-size: 16px;
   z-index: 40;
@@ -926,14 +926,14 @@ header {
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color: purple;
+  color: #800080;
 }
 .formulario__inputContainer-input:not(:placeholder-shown) + .formulario__inputContainer-label {
   top: -18px;
   z-index: 0;
   font-size: 14px;
   font-weight: 600;
-  color: rgba(128, 0, 128, 0.459);
+  color: #80008075;
 }
 .formulario__inputContainer-textarea {
   height: 6em;
@@ -955,43 +955,6 @@ header {
 .formulario-submit:hover {
   transform: translateY(-2px);
   border: #800080 solid 4px;
-}
-
-@media screen and (max-width: 400px) {
-  header {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .main {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .table {
-    margin: 0;
-    margin-top: 20px;
-  }
-  .table-nombremed {
-    max-width: 1em;
-  }
-  .table-descripcionmed {
-    max-width: 10em;
-  }
-  .table-fechamed {
-    max-width: fit-content;
-  }
-  .table-tipomed {
-    max-width: 0.5em;
-  }
-  .table-nombremed {
-    max-width: 4em;
-  }
-  .table-td {
-    padding: 3px;
-  }
 }
 
 /*# sourceMappingURL=medicamentos.css.map */

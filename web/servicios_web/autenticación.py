@@ -1,15 +1,15 @@
 from servicios_web import rest_api
 import requests
 
-def registro(usuario, email, contraseña):
-    body = {
-        "usuario": usuario,
-        "email": email,
-        "contraseña": contraseña
-    }
-    respuesta = requests.post(f'{rest_api.API_URL}/registar', json = body)
-    return respuesta.status_code == 200
+class Sesiones():
 
-def login(usuario, email, contraseña):
-    pass
+    def registro(nombre, email, passw):
+        body = {
+            "name": nombre,
+            "email": email,
+            "contraseña": passw
+        }
+        respuesta = requests.post(f'{rest_api.API_URL}/registro', json = body)
+        return respuesta.status_code == 200
 
+        

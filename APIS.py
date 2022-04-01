@@ -1,6 +1,7 @@
+
 from flask import Flask, jsonify, request
 from datos.Modelos.Medicamentos import MedicamentosBD
-import requests
+from datos.Modelos.Usuarios import sesiones
 
 app = Flask(__name__)
 
@@ -47,6 +48,22 @@ def editar(id):
 def select(id):
     return jsonify(MedicamentosBD.select(id))
 # ___________________________________________________________________________________________________________
+
+@app.route('/registro', methods=['POST'])
+def registroUsuario():
+    print("api")
+    datos = request.get_json()
+    if 'name' not in datos:
+        return "Se requiere el nombre del usuario", 400
+    if 'email' not in datos:
+        return "Se requiere el email del usuario", 400
+    if 'contraseña' not in datos:
+        return "Se requiere una contraseña valida", 400
+    sesiones.registro(datos['name'], datos['email'], datos['contraseña'])
+    return 'OK', 200
+
+# ___________________________________________________________________________________________________________
+
 if __name__ == '__main__':
     app.debug = True
     app.run(port=5001)
