@@ -1,4 +1,4 @@
-from datos.Tablas.Crear_base_de_datos import DataBase
+from src.datos.Tablas.Crear_base_de_datos import DataBase
 
 bd = DataBase()
 
@@ -42,7 +42,6 @@ class MedicamentosBD():
         sentencia_sql = f"""
         SELECT * FROM Medicamentos WHERE idmed={id}
         """
-        print(f'{id}')
         return [{"id": med[0],
                 "nombre": med[1],
                 "tipo": med[2],    

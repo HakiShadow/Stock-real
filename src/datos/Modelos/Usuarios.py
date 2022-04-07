@@ -1,4 +1,4 @@
-from datos.Tablas.Crear_base_de_datos import DataBase
+from src.datos.Tablas.Crear_base_de_datos import DataBase
 
 bd = DataBase()
 

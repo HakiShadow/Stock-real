@@ -1,7 +1,7 @@
 
 from flask import Flask, jsonify, request
-from datos.Modelos.Medicamentos import MedicamentosBD
-from datos.Modelos.Usuarios import sesiones
+from src.datos.Modelos.Medicamentos import MedicamentosBD
+from src.datos.Modelos.Usuarios import sesiones
 
 app = Flask(__name__)
 

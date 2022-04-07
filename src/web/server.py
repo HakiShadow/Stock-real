@@ -55,7 +55,6 @@ def eliminar(id):
 
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
 def editar(id):
-    print(f'{id}')
     if request.method == 'POST':
         datosMed = request.form
         if 'descripcion' not in datosMed:
